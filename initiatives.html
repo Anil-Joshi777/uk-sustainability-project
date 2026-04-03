@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore UK sustainability initiatives featuring carbon goals, clean energy adoption, recycling progress, environmental policies and transport decarbonisation for net-zero delivery."
+    />
+    <title>UK Environmental Awareness | Initiatives</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.min.css" />
+  </head>
+  <body>
+    <header>
+      <div class="topbar">
+        <p class="brand"><img src="images/favicon.svg" class="brand-icon" alt="" aria-hidden="true" /> UK Environmental Awareness</p>
+        <nav aria-label="Main navigation">
+          <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+          <ul id="primary-navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="initiatives.html" aria-current="page">Environmental Initiatives</a></li>
+            <li><a href="pledge.html">Make a Pledge</a></li>
+            <li><a href="goals.html">UK Goals</a></li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
+        </nav>
+        <div class="font-controls" aria-label="Text size controls">
+          <button type="button" class="font-btn" data-font="down" aria-label="Decrease text size">A-</button>
+          <button type="button" class="font-btn" data-font="default" aria-label="Reset text size">A</button>
+          <button type="button" class="font-btn" data-font="up" aria-label="Increase text size">A+</button>
+          <button type="button" class="theme-btn" id="theme-toggle" aria-pressed="false" aria-label="Switch to dark theme">Dark</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="reveal" aria-labelledby="initiatives-title">
+        <h1 id="initiatives-title">Environmental Initiatives in the UK</h1>
+        <p>
+          Explore major areas of UK sustainability work through accordion and tabbed content.
+          Interactive sections below are keyboard-friendly and screen reader aware.
+        </p>
+      </section>
+
+      <section class="reveal" aria-labelledby="accordion-title">
+        <h2 id="accordion-title">Initiative Highlights</h2>
+
+        <div class="accordion-item">
+          <button
+            class="accordion-trigger"
+            aria-expanded="false"
+            aria-controls="panel-recycling"
+            id="trigger-recycling"
+            type="button"
+          >
+            Recycling Programs in the UK
+          </button>
+          <div class="accordion-panel" id="panel-recycling" role="region" aria-labelledby="trigger-recycling">
+            <p>
+              Councils are improving household waste separation and public recycling infrastructure.
+              Public awareness campaigns are reducing contamination and improving material recovery.
+            </p>
+            <p class="stat">44% household recycling rate in England (recent estimates)</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button
+            class="accordion-trigger"
+            aria-expanded="false"
+            aria-controls="panel-energy"
+            id="trigger-energy"
+            type="button"
+          >
+            Clean Energy Projects
+          </button>
+          <div class="accordion-panel" id="panel-energy" role="region" aria-labelledby="trigger-energy">
+            <p>
+              Offshore wind expansion and rooftop solar incentives are helping cut emissions from
+              electricity production while improving long-term energy resilience.
+            </p>
+            <p class="stat">Over 40% of UK electricity often comes from renewables</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button
+            class="accordion-trigger"
+            aria-expanded="false"
+            aria-controls="panel-transport"
+            id="trigger-transport"
+            type="button"
+          >
+            Greener Transport Network
+          </button>
+          <div class="accordion-panel" id="panel-transport" role="region" aria-labelledby="trigger-transport">
+            <p>
+              Expanded EV charging networks and investment in rail and cycling infrastructure support
+              cleaner travel while reducing urban air pollution.
+            </p>
+            <p class="stat">Public transport and EV adoption are key to cutting urban emissions</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal" aria-labelledby="tabs-title">
+        <h2 id="tabs-title">Visual Data Snapshot</h2>
+        <div class="tab-list" role="tablist" aria-label="Initiative data tabs">
+          <button
+            class="tab-btn"
+            id="tab-emissions"
+            role="tab"
+            type="button"
+            aria-selected="true"
+            aria-controls="panel-emissions"
+          >
+            Emissions
+          </button>
+          <button
+            class="tab-btn"
+            id="tab-renewables"
+            role="tab"
+            type="button"
+            aria-selected="false"
+            aria-controls="panel-renewables"
+            tabindex="-1"
+          >
+            Renewables
+          </button>
+          <button
+            class="tab-btn"
+            id="tab-recycling"
+            role="tab"
+            type="button"
+            aria-selected="false"
+            aria-controls="panel-recycling-data"
+            tabindex="-1"
+          >
+            Recycling
+          </button>
+        </div>
+
+        <div id="panel-emissions" class="tab-panel" role="tabpanel" aria-labelledby="tab-emissions">
+          <div class="chart-box">
+            <canvas id="emissions-chart" aria-label="Interactive carbon reduction trend chart for the UK" role="img"></canvas>
+          </div>
+        </div>
+
+        <div id="panel-renewables" class="tab-panel" role="tabpanel" aria-labelledby="tab-renewables" hidden>
+          <div class="chart-box">
+            <canvas id="renewables-chart" aria-label="Interactive renewable energy adoption chart for the UK" role="img"></canvas>
+          </div>
+        </div>
+
+        <div id="panel-recycling-data" class="tab-panel" role="tabpanel" aria-labelledby="tab-recycling" hidden>
+          <div class="chart-box">
+            <canvas id="recycling-chart" aria-label="Interactive recycling progress chart for UK households" role="img"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal" aria-labelledby="gallery-title">
+        <h2 id="gallery-title">Sustainability in Action</h2>
+        <div class="image-grid">
+          <img
+            class="initiative-image"
+            src="images/renewable-energy.jpg"
+            alt="UK clean energy infrastructure and wind generation"
+            loading="lazy"
+          />
+          <img
+            class="initiative-image"
+            src="images/initiatives-recycling.jpg"
+            alt="UK recycling and circular economy activities"
+            loading="lazy"
+          />
+          <img
+            class="initiative-image"
+            src="images/clean-transport.jpg"
+            alt="Clean transport such as electric buses and cycling lanes"
+            loading="lazy"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>UK initiatives succeed when communities, councils, and businesses act together.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="js/script.min.js" defer></script>
+  </body>
+</html>
+
+
+
+
+
+
