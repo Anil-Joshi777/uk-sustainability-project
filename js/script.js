@@ -382,3 +382,5 @@
   initInitiativeCharts();
   initResourceSearch();
 })();
+
+// interaction refinement checkpoint 1
