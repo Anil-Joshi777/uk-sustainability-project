@@ -392,3 +392,5 @@
 // interaction refinement checkpoint 14
 
 // interaction refinement checkpoint 17
+
+// interaction refinement checkpoint 22
